@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reading the VagueBench leaderboard · Rongyu Zhang</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <main>
+    <div id="bars">
+      <div id="bar-1">visitor@rongyu:$ ~/blog/leaderboard</div>
+      <div id="bar-2"></div>
+      <div id="bar-3"></div>
+      <div id="bar-4"></div>
+      <div id="bar-5"></div>
+    </div>
+    <article class="article">
+      <p><a href="./">← blog</a> · <a href="../">terminal</a></p>
+      <h1>Reading the VagueBench leaderboard</h1>
+      <p class="meta">November 2026</p>
+      <p>项目页上的榜单按论文主表排，分成三组查询。</p>
+      <p>Intent-vague queries hide the user's goal but leave some details. Fully-vague queries hide both. Those two splits are ranked by Ask%, the share of examples where the model asks before answering. Coverage F1 compares the final answer with the gold information set. IAR is the amount of hidden information recovered per elicitation turn. Higher is better for all three.</p>
+      <p>Complete queries are different. The request is already specified, so asking is usually an interruption. That split is ranked by coverage F1, and its Ask% bar is drawn in red because lower is better.</p>
+      <p>The filters separate closed-source models, open-source models, and methods built on Qwen3.5-27B. DialogGRPO is first on all three splits in the numbers reported by the paper: 88.4% / 0.64 / 0.76 on intent-vague, 91.2% / 0.67 / 0.87 on fully-vague, and coverage F1 0.74 on complete queries with a 5.2% ask rate.</p>
+      <p><a href="https://zhangrongyu0101.github.io/VagueBench/#leaderboard" target="_blank" rel="noopener">Open the leaderboard</a></p>
+    </article>
+  </main>
+</body>
+</html>
