@@ -69,6 +69,16 @@ pre {
   white-space: pre;
 }
 
+pre.banner {
+  margin: 10px 0 2px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+pre.banner .mark { color: var(--cyan); }
+
 .prompt, .user, .host { color: var(--cyan); }
 
 .command {
@@ -100,7 +110,7 @@ input {
 
 @media (max-width: 700px) {
   body { padding: 6px; font-size: 13px; }
-  pre { font-size: 8px; line-height: 11px; }
+  pre.banner { font-size: 13px; line-height: 1; }
   #terminal, #input-line, .article { margin-left: 10px; margin-right: 10px; }
   #bar-1 { font-size: 16px; }
 }

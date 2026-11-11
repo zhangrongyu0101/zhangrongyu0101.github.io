@@ -1,25 +1,17 @@
-const banner = String.raw`
- ____   ___  _   _  ____ _   _ _   _
-|  _ \ / _ \| \ | |/ ___| | | | | | |
-| |_) | | | |  \| | |  _| | | | | | |
-|  _ <| |_| | |\  | |_| | |_| | |_| |
-|_| \_\___/|_| \_|\____|\___/ \___/
-`.trim().split("\n");
+const bannerRows = [
+  ["█████▌", "Rongyu Zhang"],
+  ["██▀▀▀█", "Zhejiang University · Hangzhou"],
+  ["█ ██▌ ", "type <span class=\"command\">help</span> · type <span class=\"command\">blog</span>"]
+];
 
 const commands = ["help", "about", "blog", "news", "experience", "contact", "banner", "clear"];
 
 const lines = {
   banner() {
-    return [
-      ...banner.map(row => `<pre>${escapeHtml(row)}</pre>`),
-      "",
-      "Hi, this is Rongyu Zhang.",
-      "I am at Zhejiang University, in Hangzhou.",
-      "------------------",
-      "Type <span class='command'>help</span> for commands.",
-      "Type <span class='command'>blog</span> for the writing.",
-      ""
-    ];
+    const art = bannerRows
+      .map(([mark, text]) => `<span class="mark">${mark}</span>  ${text}`)
+      .join("\n");
+    return [`<pre class="banner">${art}</pre>`, ""];
   },
   help() {
     const rows = [
